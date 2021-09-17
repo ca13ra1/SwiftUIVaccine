@@ -50,7 +50,6 @@ class VaccineData: ObservableObject {
     }
     
     func authorization() {
-        let healthstore: HKHealthStore = HKHealthStore()
         let type = HKObjectType.clinicalType(forIdentifier: .immunizationRecord)!
         healthstore.requestAuthorization(toShare: [], read: [type]) { (success, error) in
             guard success, error == nil else {
