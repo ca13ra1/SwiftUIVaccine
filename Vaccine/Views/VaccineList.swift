@@ -13,7 +13,7 @@ struct VaccineList: View {
         NavigationView {
             List(data.records, id: \.self){ vaccine in
                 Section(header: Text(vaccine.occurrence.fhdirdate().description).font(.headline).fontWeight(.bold).foregroundColor(Color.primary)) {
-                    VaccineView(data: data, status: vaccine.status.value?.rawValue ?? "", vaccineCode: vaccine.vaccineCode.coding?.last?.code?.value?.string.vaccine() ?? "")
+                    VaccineView(data: data, status: vaccine.status.value?.rawValue ?? "", vaccineCode: vaccine.vaccineCode.coding?.last?.code?.value?.string.vaccine().capitalized ?? "")
                 }
             }
             .refreshable {
