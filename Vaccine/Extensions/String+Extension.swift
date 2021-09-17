@@ -7,18 +7,36 @@
 
 import Foundation
 
-//https://www.newswire.ca/news-releases/canadian-vaccine-catalogue-releases-critical-standardized-terminology-for-covid-19-vaccines-861079024.html
+//https://cvc.canimmunize.ca/en/explore#/tradenames
+//https://www.canada.ca/en/health-canada/services/drugs-health-products/covid19-industry/drugs-vaccines-treatments/authorization/list-drugs.html
 extension String {
     func vaccine() -> String {
         switch self {
         case "28581000087106":
-            return "PFIZER-BIONTECH COVID-19"
+            //(PFIZER-BIONTECH COVID-19)
+            return "Comirnaty"
         case "28571000087109":
-            return "MODERNA COVID-19"
-        case "28531000087107":
-            return "Vaccine product against disease caused by Severe acute respiratory syndrome coronavirus 2 (medicinal product)"
-        case "1119349007":
-            return "Vaccine product containing only Severe acute respiratory syndrome coronavirus 2 messenger ribonucleic acid (medicinal product)"
+            //(MODERNA COVID-19)
+            return "SPIKEVAX"
+        case "28761000087108":
+            //(ASTRAZENECA COVID-19 VACCINE
+            return "Vaxzevria)"
+        case "28961000087105":
+            return "COVISHIELD"
+        case "28951000087107":
+            return "JANSSEN COVID-19 VACCINE"
+        case "29171000087106":
+            return "NOVAVAX COVID-19 VACCINE"
+        case "30151000087105":
+            return "MEDICAGO COVID-19 VACCINE"
+        case "31341000087103":
+            return "Sputnik V COVID-19 vaccine"
+        case "31301000087101":
+            return "COVID-19 vaccine BIBP"
+        case "31311000087104":
+            return "CoronaVac COVID-19 vaccine"
+        case "31431000087100":
+            return "Convidecia COVID-19 vaccine"
         default:
             return ""
         }

@@ -18,6 +18,7 @@ struct VaccineView: View {
                     .font(.footnote)
                     .foregroundColor(status == "completed" && data.records.count > 1 ? Color.green : status == "completed" && data.records.count < 2 ? Color.blue : Color.red)
                 Text(vaccineCode)
+                    .lineLimit(1)
             }
             HStack(spacing: 3) {
                 Text(Image(systemName: status == "completed" ? "checkmark.seal.fill" : "xmark.seal.fill"))
