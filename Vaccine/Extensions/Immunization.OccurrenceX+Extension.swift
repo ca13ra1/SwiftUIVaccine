@@ -9,7 +9,7 @@ import Foundation
 import ModelsR4
 
 extension Immunization.OccurrenceX {
-    func fhdirdate() -> String {
+    func fhirdate() -> String {
         var string = ""
         if case let .dateTime(value) = self {
             string = value.value?.description ?? ""
