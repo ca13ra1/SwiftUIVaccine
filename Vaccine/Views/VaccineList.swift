@@ -21,7 +21,6 @@ struct VaccineList: View {
             }
             .navigationBarTitle(data.records.count > 1 ? "Vaccinated" : data.records.count > 0 ? "Partially Vaccinated" : "", displayMode: .inline)
         }
-        .navigationViewStyle(.stack)
         .onAppear(perform: data.authorization)
         .onChange(of: data.authorized, perform: {_ in
             data.immunizations()
