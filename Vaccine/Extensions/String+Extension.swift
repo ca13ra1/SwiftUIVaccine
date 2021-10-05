@@ -20,7 +20,7 @@ extension String {
             return "SPIKEVAX"
         case "28761000087108":
             //(ASTRAZENECA COVID-19 VACCINE
-            return "Vaxzevria)"
+            return "Vaxzevria"
         case "28961000087105":
             return "COVISHIELD"
         case "28951000087107":
