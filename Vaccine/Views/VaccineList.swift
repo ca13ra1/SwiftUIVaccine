@@ -13,13 +13,13 @@ struct VaccineList: View {
         NavigationView {
             List(data.records, id: \.self){ vaccine in
                 Section(header: Text(vaccine.occurrence.fhirdate().description).font(.headline).fontWeight(.bold).foregroundColor(Color.primary)) {
-                    VaccineView(data: data, status: vaccine.status.value?.rawValue ?? "", vaccineCode: vaccine.vaccineCode.coding?.last?.code?.value?.string.vaccine().capitalized ?? "")
+                    VaccineCell(data: data, status: vaccine.status.value?.rawValue ?? "", vaccineCode: vaccine.vaccineCode.coding?.last?.code?.value?.string.vaccine().capitalized ?? "")
                 }
             }
             .refreshable {
                 data.immunizations()
             }
-            .navigationBarTitle(data.records.count > 1 ? "Vaccinated" : data.records.count > 0 ? "Partially Vaccinated" : "", displayMode: .inline)
+            .navigationBarTitle("Vaccinated", displayMode: .inline)
         }
         .onAppear(perform: data.authorization)
         .onChange(of: data.authorized, perform: {_ in
